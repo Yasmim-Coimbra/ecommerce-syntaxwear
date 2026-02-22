@@ -1,0 +1,79 @@
+.products-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 270px);
+    gap: 30px;
+    grid-template-areas:
+        "highlight highlight purple-green-sneaker purple-green-sneaker"
+        "highlight highlight model colorful-sneaker"
+        "black-white-sneaker black-white-sneaker model futurist-sneaker";
+}
+
+.product-card {
+    background: no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+
+    &.top-left {
+        grid-area: highlight;
+        background-image: url(../../../images/products/products-grid/male-model.jpg);
+
+        .card-content {
+            color: var(--primary-light-color);
+            text-align: center;
+            letter-spacing: 2.2px;
+
+            .card-title,
+            .card-subtitle {
+                font-weight: var(--primary-font-weight);
+            }
+
+            .card-title {
+                font-size: 1.25rem;
+                margin-bottom: 10px;
+            }
+
+            .card-subtitle {
+                font-size: 1.5rem;
+                margin-bottom: 20px;
+            }
+
+            .card-buttons {
+                display: flex;
+                justify-content: center;
+                gap: 10px;
+
+                .btn {
+                    padding: 0.25rem 1.65rem;
+                }
+            }
+        }
+    }
+
+    &.bottom-left {
+        grid-area: black-white-sneaker;
+        background-image: url(../../../images/products/products-grid/black-white-sneaker_grid.jpg);
+    }
+
+    &.top-right {
+        grid-area: purple-green-sneaker;
+        background-image: url(../../../images/products/products-grid/purple-green-sneaker_grid.jpg);
+    }
+
+    &.middle-left {
+        grid-area: colorful-sneaker;
+        background-image: url(../../../images/products/products-grid/colorful-sneaker_grid.jpg);
+    }
+
+    &.top-middle-right {
+        grid-area: model;
+        background-image: url(../../../images/products/products-grid/female-model.jpg);
+    }
+
+    &.bottom-middle-right {
+        grid-area: futurist-sneaker;
+        background-image: url(../../../images/products/products-grid/futurist-sneaker_grid.jpg);
+    }
+}
