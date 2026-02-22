@@ -44,3 +44,23 @@
         padding: 0.4rem 1.5rem;
     }
 }
+
+@media (max-width:768px) {
+	.hero-section{
+		background: url(../../../images/banners/hero-mobile.jpg) no-repeat center center/cover;
+		height: 660px;
+	}
+
+	.hero-overlay{
+		padding: 0;
+	}
+
+	.hero-content{
+		max-width: 310px;
+		margin: 0 auto;
+	}
+
+	.hero-buttons .btn{
+		font-size: 1.15rem;
+	}
+}
