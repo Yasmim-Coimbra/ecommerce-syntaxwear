@@ -77,3 +77,33 @@
         background-image: url(../../../images/products/products-grid/futurist-sneaker_grid.jpg);
     }
 }
+
+@media (max-width: 768px) {
+    .products-container {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(5, auto);
+        grid-template-areas:
+            "highlight highlight"
+            "black-white-sneaker black-white-sneaker"
+            "model colorful-sneaker"
+            "model futurist-sneaker"
+            "purple-green-sneaker purple-green-sneaker";
+        max-width: 100%;
+        gap: 0.625rem;
+    }
+
+    .product-card {
+        &.top-left {
+            min-height: 500px;
+        }
+
+        &.top-middle-right {
+            min-height: 370px;
+        }
+
+        &.top-right,
+        &.bottom-left {
+            min-height: 190px;
+        }
+    }
+}
